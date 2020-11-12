@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+body{
+    background-image: url("../img/mainBackground.jpg");
+    width: 100vw;
+    height: 100vh;
+    overflow:  hidden;
+}
+header{
+    padding-top: 2vh;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+      
+}
+
+#nav-logo{
+    display: inline-block;
+    background-image: url("../img/sw_logo_stacked-336c62367939.png");
+    width: 40vw;
+    background-size: auto 18vh; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#resultContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+ .list-inf{
+    color: #999;
+    font-family: 'Goldman', cursive;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.list-inf:hover{
+    text-shadow:0 0 10px rgb(226, 92, 52);
+    
+}
+
+.hidden{
+    display: none !important;
+}
+.selectedAddInf{
+    box-shadow:0 0 20px rgb(168, 154, 228);
+}
+#interactive-output{
+    display: flex;
+    height: 62vh;
+}
+#pagination-wrapper{
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+}
+#pagination-wrapper button{
+    cursor: pointer;
+    outline: none;
+    font-family: 'Goldman', cursive;
+    font-size: 2vh;
+    background: rgba(0,0,0,0.8);
+    color: white;
+}
+
+#pagination-wrapper #value{
+    font-family: 'Goldman', cursive;
+    font-size: 4vh;
+    color: white;
+    text-shadow:0 0 15px rgb(192, 64, 25);
+}
+
+#containerDetailInf{
+    color: #999;
+    
+} 
+#searchContainer{
+    display: flex;
+    height: 8vh; 
+    align-items: center;
+}
+
+#searchGo{
+    outline: none;
+    width: 20vw;
+    height: 5vh; 
+    cursor: pointer;
+    font-family: 'Goldman', cursive;
+    font-size: 3vh;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    border: 1px solid black;
+    box-shadow:0 0 18px rgb(48, 2, 107);
+    text-shadow:0 0 10px rgb(23, 6, 121);
+    
+}
+
+#searchGo:hover{
+    box-shadow:0 0 15px rgb(192, 64, 25);
+    text-shadow:0 0 10px rgb(226, 92, 52);
+}
+
+#choiseObject{
+    width: 80vw;
+    height: 5vh; 
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Goldman', cursive;
+    font-size: 3vh;
+    border: 1px solid black;
+    box-shadow:0 0 18px rgb(48, 2, 107);  
+}
+
