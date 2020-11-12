@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./icon.png" type="image/png">
+    <title>Search Star Wars</title>
+</head>
+<body>
+    <header>
+        <a id="nav-logo" href="" title = "Star Wars Home"></a>
+    </header>
+    <section id="searchContainer">
+    <select id="choiseObject">
+        <option value="starships">Starship</option>
+        <option value="people">People</option>
+        <option value="planets">Planets</option>
+    </select>
+    <!-- <input id='idSearch' type="text"> -->
+    <button id='searchGo'>Search</button>
+    </section>
+    <section id="interactive-output">
+        <ul id='resultContainer'></ul>
+        <ul id='containerDetailInf'></ul>
+    </section>
+    <div id="pagination-wrapper" class="hidden">
+    <button id="prev">Previous</button>
+    <div id="value">1</div>
+    <button id="next">Next</button>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
