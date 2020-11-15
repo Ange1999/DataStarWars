@@ -4,11 +4,12 @@ import {displayDetails} from './displayDetails'
 
 export default function() {
 const choiseObj = document.getElementById("choiseObject");
-//const textInput = document.getElementById('idSearch');
+const fullInformationContainer = document.getElementById("interactive-output");
 const container = document.getElementById("resultContainer");
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 const pageValue = document.getElementById("value");
+const searchButton = document.getElementById("searchGo");
 const containerSwitchPages = document.getElementById("pagination-wrapper");
 const arrDetailButtons = document.querySelectorAll(".button-add-detail");
 const arrListDetails = document.querySelectorAll(".list-inf");
@@ -19,7 +20,7 @@ let arrRes = [];
 
 
 hideButton(containerSwitchPages);
-document.getElementById("searchGo").addEventListener("click", () => {
+searchButton.addEventListener("click", () => {
   const URL = `https://swapi.dev/api/${choiseObj.value}/?page=1`;
   rendererData(URL);
   pageValue.innerText=1;
@@ -37,11 +38,16 @@ function hideButton(button) {
   button.classList.add("hidden");
 }
 
+function hideElem(elem){
+  elem.innerHTML = null;
+}
+
 function rendererData(URL) {
   swapiRequest(URL).then((data) => {
       prevPageUrl = data.previous;
       nextPageUrl = data.next;
-      container.innerHTML = null;
+      hideElem(detailInfContainer);
+      hideElem(container);
       showButton(containerSwitchPages);
       showHideButton(prevPageUrl, prevButton);
       showHideButton(nextPageUrl, nextButton);
@@ -59,12 +65,14 @@ function rendererData(URL) {
 displayDetails(container,arrRes,detailInfContainer);
 
 nextButton.addEventListener("click", () => {
+  hideElem(detailInfContainer);
   changeValuePage(nextPageUrl,'next')
+ 
 });
 
 prevButton.addEventListener("click", () => {
+  hideElem(detailInfContainer);
   changeValuePage(prevPageUrl,'prev')
-
 });
 
 function changeValuePage(pageUrl,page){

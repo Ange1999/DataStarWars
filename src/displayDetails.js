@@ -10,10 +10,11 @@ function displayDetails(container, arrRes, detailInfContainer) {
       detailInfContainer.insertAdjacentHTML(
         "beforeend",
         `
-          <li>
+          <p>
          ${stringDetail}
-          </li>    `
+          </p>`
       );
+      console.log(oDetailInf)
     }
   });
 }

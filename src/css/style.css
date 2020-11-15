@@ -26,8 +26,19 @@ header{
 #resultContainer{
     display: flex;
     flex-direction: column;
-    
+    width: 40vw;
+    font-size: 3vh;   
 }
+
+#containerDetailInf{
+    color: #999;
+    font-family: 'Goldman', cursive;
+    font-size: 3vh;
+    padding-right: 4vw;
+    width: 60vw;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+} 
 
  .list-inf{
     color: #999;
@@ -37,8 +48,7 @@ header{
 }
 
 .list-inf:hover{
-    text-shadow:0 0 10px rgb(226, 92, 52);
-    
+    color: white;;
 }
 
 .hidden{
@@ -49,12 +59,12 @@ header{
 }
 #interactive-output{
     display: flex;
+    justify-content: left;
     height: 62vh;
 }
 #pagination-wrapper{
     display: flex;
     height: 10vh;
-    justify-content: space-around;
     align-items: center;
 }
 #pagination-wrapper button{
@@ -62,21 +72,20 @@ header{
     outline: none;
     font-family: 'Goldman', cursive;
     font-size: 2vh;
-    background: rgba(0,0,0,0.8);
+    background: #343434;
+    opacity: 0.7;
     color: white;
+    width: 33vw;
 }
 
 #pagination-wrapper #value{
     font-family: 'Goldman', cursive;
     font-size: 4vh;
+    width: 33vw;
     color: white;
     text-shadow:0 0 15px rgb(192, 64, 25);
 }
 
-#containerDetailInf{
-    color: #999;
-    
-} 
 #searchContainer{
     display: flex;
     height: 8vh; 
@@ -113,4 +122,3 @@ header{
     border: 1px solid black;
     box-shadow:0 0 18px rgb(48, 2, 107);  
 }
-
